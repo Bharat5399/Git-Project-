@@ -19,7 +19,7 @@ const { revertRepo } = require("./controllers/revert");
 //dotenv.config();
 
  yargs(hideBin(process.argv))
-  //.command("start", "Starts a new server", {}, startServer)
+  .command("start", "Starts a new server", {}, startServer)
   .command("init", "Initialise a new repository", {}, initRepo)
  .command(
     "add <file>",
@@ -65,7 +65,9 @@ const { revertRepo } = require("./controllers/revert");
   .demandCommand(1, "You need at least one command")
   .help().argv;
 
-// function startServer() {
+ function startServer() {
+  console.log(" Server logic called!");
+ }S
 //   const app = express();
 //   const port = process.env.PORT || 3000;
 
@@ -112,4 +114,4 @@ const { revertRepo } = require("./controllers/revert");
 //   httpServer.listen(port, () => {
 //     console.log(`Server is running on PORT ${port}`);
 //   });
-// }
+//}
