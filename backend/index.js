@@ -1,10 +1,10 @@
-// const express = require("express");
- const dotenv = require("dotenv");
-// const cors = require("cors");
-// const mongoose = require("mongoose");
-// const bodyParser = require("body-parser");
-// const http = require("http");
-// const { Server } = require("socket.io");
+const express = require("express");
+const dotenv = require("dotenv");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const http = require("http");
+const { Server } = require("socket.io");
 // const mainRouter = require("./routes/main.router");
 
 const yargs = require("yargs");
@@ -66,15 +66,13 @@ const { revertRepo } = require("./controllers/revert");
   .help().argv;
 
  function startServer() {
-  console.log(" Server logic called!");
- }S
-//   const app = express();
-//   const port = process.env.PORT || 3000;
+  
+const app = express();
+const port = process.env.PORT || 3000;
 
-//   app.use(bodyParser.json());
-//   app.use(express.json());
-
-//   const mongoURI = process.env.MONGODB_URI;
+ app.use(bodyParser.json());
+app.use(express.json());
+const mongoURI = process.env.MONGODB_URI;
 
 //   mongoose
 //     .connect(mongoURI)
